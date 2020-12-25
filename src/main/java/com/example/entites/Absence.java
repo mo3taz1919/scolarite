@@ -24,6 +24,10 @@ public class Absence {
 	
 
 	
+	public Absence() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public Absence(Long idAbs, String hdebut, String hfin, Date dateD, Date dateF) {
 		super();
 		IdAbs = idAbs;

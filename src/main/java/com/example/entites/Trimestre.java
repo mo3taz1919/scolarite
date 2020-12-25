@@ -8,6 +8,8 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Trimestre {
@@ -17,6 +19,36 @@ public class Trimestre {
 	private String Libelle;
 	private Date DateDebut;
 	private Date DateFin;
+	@ManyToOne
+    @JoinColumn(name="AnnScolaire_id")
+    private AnnScolaire AnnScolaire;
+	
+	public Trimestre() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+
+	public Trimestre(Long idTri, String libelle, Date dateDebut, Date dateFin,
+			com.example.entites.AnnScolaire annScolaire) {
+		super();
+		IdTri = idTri;
+		Libelle = libelle;
+		DateDebut = dateDebut;
+		DateFin = dateFin;
+		AnnScolaire = annScolaire;
+	}
+
+
+	public AnnScolaire getAnnScolaire() {
+		return AnnScolaire;
+	}
+
+
+	public void setAnnScolaire(AnnScolaire annScolaire) {
+		AnnScolaire = annScolaire;
+	}
+
 
 	public Long getIdTri() {
 		return IdTri;

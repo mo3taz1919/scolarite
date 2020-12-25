@@ -2,7 +2,7 @@
 package com.example.entites;
 
 import java.sql.Date;
-
+import java.util.Collection;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -11,7 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 
 
 @Entity
@@ -22,9 +22,16 @@ public class AnnScolaire {
 	private String Libelle;
 	private Date DateDebut;
 	private Date DateFin;
-	
+
 
 	
+
+	public AnnScolaire() {
+		super();
+	}
+	
+	
+
 	public Long getIdAnnsc() {
 		return IdAnnsc;
 	}
