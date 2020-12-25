@@ -11,11 +11,18 @@ public class Frais {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long IdFrai;
 	private int Mois;
+	
+	public Frais() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public Frais(Long idFrai, int mois) {
 		super();
 		IdFrai = idFrai;
 		Mois = mois;
 	}
+	
 	public Long getIdFrai() {
 		return IdFrai;
 	}

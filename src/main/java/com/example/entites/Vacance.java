@@ -17,6 +17,10 @@ public class Vacance {
 	private String Libelle;
 	private Date DateD;
 	private Date DateF;
+	
+	public Vacance() {
+		super();
+	}
 	public Vacance(Long idVac, String libelle, Date dateD, Date dateF) {
 		super();
 		IdVac = idVac;
